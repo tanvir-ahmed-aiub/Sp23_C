@@ -127,6 +127,8 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\AdminAccess.cs" />
+    <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="EF\Models\Category.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="EF\Models\OrderDetail.cs" />
     <Compile Include="EF\Models\PMSContext.cs" />
     <Compile Include="EF\Models\Product.cs" />
+    <Compile Include="EF\Models\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -153,7 +156,16 @@
     <Compile Include="Migrations\202302270754252_PKFKOrderProductOrderdetail.designer.cs">
       <DependentUpon>202302270754252_PKFKOrderProductOrderdetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202303010759186_OrderDetailTableAdded.cs" />
+    <Compile Include="Migrations\202303010759186_OrderDetailTableAdded.designer.cs">
+      <DependentUpon>202303010759186_OrderDetailTableAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303010825282_UserOrderPkFk.cs" />
+    <Compile Include="Migrations\202303010825282_UserOrderPkFk.designer.cs">
+      <DependentUpon>202303010825282_UserOrderPkFk.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,10 +205,13 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\Cart.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\AllOrders.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -223,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302270754252_PKFKOrderProductOrderdetail.resx">
       <DependentUpon>202302270754252_PKFKOrderProductOrderdetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303010759186_OrderDetailTableAdded.resx">
+      <DependentUpon>202303010759186_OrderDetailTableAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303010825282_UserOrderPkFk.resx">
+      <DependentUpon>202303010825282_UserOrderPkFk.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

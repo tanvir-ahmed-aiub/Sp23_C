@@ -18,11 +18,19 @@
                 </button>
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            @{
+                int count = 0;
+                if (Session["cart"] != null) {
+                    count = ((List<EFCodeFirst.EF.Models.Product>)Session["cart"]).Count();
+                }
+            }
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li><a href="/Order/Index">Products</a></li>
+                    <li><a href="/Order/Cart">My Cart (@count)</a></li>
                 </ul>
             </div>
         </div>

@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<EFCodeFirst.EF.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cart";
 }
 
-<h2>Index</h2>
-@if(TempData["Msg"] != null)
-{
-    <h3 class="alert text-center alert-success">@TempData["Msg"]</h3>
-}
+<h2>Cart</h2>
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -24,7 +21,7 @@
             @Html.DisplayNameFor(model => model.Qty)
         </th>
         <th>
-            Category
+            @Html.DisplayNameFor(model => model.CId)
         </th>
         <th></th>
     </tr>
@@ -41,18 +38,16 @@
             @Html.DisplayFor(modelItem => item.Qty)
         </td>
         <td>
-            @item.Category.Name
+            @Html.DisplayFor(modelItem => item.CId)
         </td>
         <td>
-           <a href="/Order/AddCart/@item.Id" class="btn btn-success">Add to Cart</a>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
+
 }
 
 </table>
-<p class="text-center">
-    @for (int i = 1; i <= ViewBag.Pages; i++)
-    {
-        <a href="/Order/Index/@i" class="btn btn-danger">@i</a>
-    }
-</p>
+<a href="/Order/Place" class="btn btn-danger pull-right">Place Order</a>

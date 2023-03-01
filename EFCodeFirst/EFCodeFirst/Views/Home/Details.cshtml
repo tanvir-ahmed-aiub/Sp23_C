@@ -1,0 +1,30 @@
+﻿@model EFCodeFirst.EF.Models.Order
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<h1>Ordered By:@Model.OrderedBy.Name </h1>
+<h2>Order Date: @Model.OrderDate</h2>
+<h2>Order Status: @Model.Status</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Item Total</th>
+    </tr>
+    @foreach (var od in Model.OrderDetails) { 
+        <tr>
+            <td>@od.Product.Name</td>
+            <td>@od.Price</td>
+            <td>@od.Qty</td>
+            <td>@(od.Qty*od.Price)</td>
+        </tr>
+    }
+    <tr>
+        <th colspan="3">Total</th>
+        <th>@Model.Amount</th>
+    </tr>
+</table>
+
