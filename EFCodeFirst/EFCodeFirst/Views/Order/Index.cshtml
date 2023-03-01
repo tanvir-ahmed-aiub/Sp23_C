@@ -1,0 +1,55 @@
+﻿@model IEnumerable<EFCodeFirst.EF.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            Category
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @item.Category.Name
+        </td>
+        <td>
+           <a href="/Order/AddCart" class="btn btn-success">Add to Cart</a>
+        </td>
+    </tr>
+}
+
+</table>
+<p class="text-center">
+    @for (int i = 1; i <= ViewBag.Pages; i++)
+    {
+        <a href="/Order/Index/@i" class="btn btn-danger">@i</a>
+    }
+</p>

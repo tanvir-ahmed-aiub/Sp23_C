@@ -5,8 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="46710e94912d4c128a453ad4d49accac" Name="Diagram1">
-        <EntityTypeShape EntityType="UMSSp23_CModel.Cours" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="UMSSp23_CModel.Student" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMSSp23_CModel.Cours" Width="1.5" PointX="1.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMSSp23_CModel.Student" Width="1.5" PointX="7.625" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="UMSSp23_CModel.CourseStudent" Width="1.5" PointX="4.75" PointY="0.5" />
+        <EntityTypeShape EntityType="UMSSp23_CModel.Department" Width="1.5" PointX="4.75" PointY="2.75" />
+        <AssociationConnector Association="UMSSp23_CModel.FK_Courses_Departments" />
+        <AssociationConnector Association="UMSSp23_CModel.FK_CourseStudents_Courses" />
+        <AssociationConnector Association="UMSSp23_CModel.FK_CourseStudents_Students" />
+        <AssociationConnector Association="UMSSp23_CModel.FK_Students_Departments" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
