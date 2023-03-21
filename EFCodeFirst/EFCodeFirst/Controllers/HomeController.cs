@@ -70,5 +70,30 @@ namespace EFCodeFirst.Controllers
 
             return View();
         }
+        [AdminAccess]
+        public ActionResult Process(int id)
+        {
+            PMSContext ctx = new PMSContext();
+            var order = ctx.Orders.Find(id);
+            foreach (var od in order.OrderDetails) {
+                var p = ctx.Products.Find(od.PId);
+                p.Qty -= od.Qty;
+            }
+            order.Status = "Processing";
+            ctx.SaveChanges();
+            TempData["Msg"] = "Orded Placed Successfully";
+            return RedirectToAction("AllOrders");
+            
+        }
+        [AdminAccess]
+        public ActionResult Cancel(int id)
+        {
+            PMSContext db = new PMSContext();
+            var order = db.Orders.Find(id);
+            order.Status = "Cancelled by Admin";
+            db.SaveChanges();
+            TempData["Msg"] = "Orded Cancelled";
+            return RedirectToAction("AllOrders");
+        }
     }
 }

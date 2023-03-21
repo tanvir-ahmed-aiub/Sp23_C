@@ -5,6 +5,9 @@
 }
 
 <h2>AllOrders</h2>
+@if (TempData["Msg"] != null) { 
+    <p class="alert alert-info">@TempData["Msg"]</p>
+}
 
 <p>
     @Html.ActionLink("Create New", "Create")
