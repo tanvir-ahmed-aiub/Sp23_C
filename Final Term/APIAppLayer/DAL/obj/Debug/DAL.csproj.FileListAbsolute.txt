@@ -12,3 +12,4 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\DAL\obj\Debug\DAL.dl
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\DAL\obj\Debug\DAL.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\DAL\obj\Debug\DAL.Migrations.InitDB.resources
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\DAL\obj\Debug\DAL.Migrations.CourseTableAdded.resources

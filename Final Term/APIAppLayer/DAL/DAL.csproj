@@ -56,10 +56,16 @@
     <Compile Include="Migrations\202303250730140_InitDB.designer.cs">
       <DependentUpon>202303250730140_InitDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304050712467_CourseTableAdded.cs" />
+    <Compile Include="Migrations\202304050712467_CourseTableAdded.designer.cs">
+      <DependentUpon>202304050712467_CourseTableAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repos\EmployeeRepo.cs" />
+    <Compile Include="Repos\EmployeeRepoV2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -68,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202303250730140_InitDB.resx">
       <DependentUpon>202303250730140_InitDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304050712467_CourseTableAdded.resx">
+      <DependentUpon>202304050712467_CourseTableAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
