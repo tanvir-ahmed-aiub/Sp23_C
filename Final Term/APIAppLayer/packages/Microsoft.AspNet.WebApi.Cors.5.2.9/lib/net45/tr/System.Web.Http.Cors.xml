@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.Cors</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.Http.CorsHttpConfigurationExtensions">
+      <summary>
+        <see cref="T:System.Web.Http.HttpConfiguration" /> için CORS ile ilişkili yöntemler.</summary>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.EnableCors(System.Web.Http.HttpConfiguration)">
+      <summary>CORS desteğini etkinleştirir.</summary>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.EnableCors(System.Web.Http.HttpConfiguration,System.Web.Http.Cors.ICorsPolicyProvider)">
+      <summary>CORS desteğini etkinleştirir.</summary>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <param name="defaultPolicyProvider">Varsayılan <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.GetCorsEngine(System.Web.Http.HttpConfiguration)">
+      <summary>
+        <see cref="T:System.Web.Http.HttpConfiguration" /> öğesinden <see cref="T:System.Web.Cors.ICorsEngine" /> alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Cors.ICorsEngine" />.</returns>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.GetCorsPolicyProviderFactory(System.Web.Http.HttpConfiguration)">
+      <summary>
+        <see cref="T:System.Web.Http.HttpConfiguration" /> öğesinden <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /> alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" />.</returns>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.SetCorsEngine(System.Web.Http.HttpConfiguration,System.Web.Cors.ICorsEngine)">
+      <summary>
+        <see cref="T:System.Web.Http.HttpConfiguration" /> üzerindeki <see cref="T:System.Web.Cors.ICorsEngine" /> öğesini ayarlar.</summary>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <param name="corsEngine">
+        <see cref="T:System.Web.Cors.ICorsEngine" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration veya corsEngine</exception>
+    </member>
+    <member name="M:System.Web.Http.CorsHttpConfigurationExtensions.SetCorsPolicyProviderFactory(System.Web.Http.HttpConfiguration,System.Web.Http.Cors.ICorsPolicyProviderFactory)">
+      <summary>
+        <see cref="T:System.Web.Http.HttpConfiguration" /> üzerindeki <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /> öğesini ayarlar.</summary>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <param name="corsPolicyProviderFactory">
+        <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration veya corsPolicyProviderFactory</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory">
+      <summary>Denetleyiciden veya eylem özniteliğinden <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> döndüren bir <see cref="T:System.Web.Http.Cors.ICorsPolicyProviderFactory" /> uygulaması.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.#ctor">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.DefaultPolicyProvider">
+      <summary>Varsayılan <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> öğesini alır veya ayarlar.</summary>
+      <returns>Varsayılan <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Cors.AttributeBasedPolicyProviderFactory.GetCorsPolicyProvider(System.Net.Http.HttpRequestMessage)">
+      <summary>İstek için <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> öğesini alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</returns>
+      <param name="request">İstek.</param>
+      <exception cref="T:System.ArgumentNullException">istek</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsHttpRequestMessageExtensions">
+      <summary>
+        <see cref="T:System.Net.Http.HttpRequestMessage" /> için CORS ile ilişkili yöntemler.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsHttpRequestMessageExtensions.GetCorsRequestContext(System.Net.Http.HttpRequestMessage)">
+      <summary>Belirtilen istek için <see cref="T:System.Web.Cors.CorsRequestContext" /> değerini alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Cors.CorsRequestContext" />.</returns>
+      <param name="request">
+        <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+      <exception cref="T:System.ArgumentNullException">istek</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsHttpResponseMessageExtensions">
+      <summary>
+        <see cref="T:System.Net.Http.HttpResponseMessage" /> için CORS ile ilişkili yöntemler.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsHttpResponseMessageExtensions.WriteCorsHeaders(System.Net.Http.HttpResponseMessage,System.Web.Cors.CorsResult)">
+      <summary>CORS üstbilgilerini yanıta yazar.</summary>
+      <param name="response">
+        <see cref="T:System.Net.Http.HttpResponseMessage" />.</param>
+      <param name="corsResult">
+        <see cref="T:System.Web.Cors.CorsResult" />.</param>
+      <exception cref="T:System.ArgumentNullException">response veya corsResult</exception>
+    </member>
+    <member name="T:System.Web.Http.Cors.CorsMessageHandler">
+      <summary>CORS isteklerini işlemek için özel <see cref="T:System.Net.Http.DelegatingHandler" />.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.#ctor(System.Web.Http.HttpConfiguration)">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.CorsMessageHandler" /> sınıfının yeni bir örneğini başlatır.</summary>
+      <param name="httpConfiguration">
+        <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+      <exception cref="T:System.ArgumentNullException">httpConfiguration</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.HandleCorsPreflightRequestAsync(System.Net.Http.HttpRequestMessage,System.Web.Cors.CorsRequestContext,System.Threading.CancellationToken)">
+      <summary>CORS tarafından belirtilen denetim öncesi isteği işler.</summary>
+      <returns>
+        <see cref="T:System.Threading.Tasks.Task`1" />
+      </returns>
+      <param name="request">İstek.</param>
+      <param name="corsRequestContext">Cors istek bağlamı.</param>
+      <param name="cancellationToken">İptal belirteci.</param>
+      <exception cref="T:System.ArgumentNullException">request veya corsRequestContext</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.HandleCorsRequestAsync(System.Net.Http.HttpRequestMessage,System.Web.Cors.CorsRequestContext,System.Threading.CancellationToken)">
+      <summary>Fiili CORS isteğini işler.</summary>
+      <returns>
+        <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <param name="request">
+        <see cref="T:System.Net.Http.HttpRequestMessage" />.</param>
+      <param name="corsRequestContext">
+        <see cref="T:System.Web.Cors.CorsRequestContext" />.</param>
+      <param name="cancellationToken">
+        <see cref="T:System.Threading.CancellationToken" />.</param>
+      <exception cref="T:System.ArgumentNullException">request veya corsRequestContext</exception>
+    </member>
+    <member name="M:System.Web.Http.Cors.CorsMessageHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>Sunucuyu zaman uyumsuz işlem olarak göndermek için iç işleyiciye bir HTTP isteği gönderir.</summary>
+      <returns>
+        <see cref="T:System.Threading.Tasks.Task`1" /> döndürür.Eşzamansız işlemi temsil eden görev nesnesi.</returns>
+      <param name="request">Sunucuya gönderilecek HTTP isteği iletisi.</param>
+      <param name="cancellationToken">İşlemi iptal etmek için bir iptal belirteci.</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.DisableCorsAttribute">
+      <summary>Bu sınıf, CORS öğesini devre dışı bırakmak üzere bir eyleme ya da denetleyiciye uygulanabilen özniteliği tanımlar.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.DisableCorsAttribute.#ctor">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.DisableCorsAttribute" /> sınıfının yeni bir örneğini başlatır.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.DisableCorsAttribute.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>CORS ilkesini zaman uyumsuz olarak alır.</summary>
+      <returns>Bu işlem için yeni oluşturulan görev.</returns>
+      <param name="request">İstek.</param>
+      <param name="cancellationToken">Bu görev için atanan iptal simgesi.</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.EnableCorsAttribute">
+      <summary>Bu sınıf, CORS öğesini etkinleştirmek üzere bir eyleme ya da denetleyiciye uygulanabilen özniteliği tanımlar. Varsayılan olarak, tüm başlangıç noktalarına, yöntemlere ve üstbilgilere izin verir.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.#ctor(System.String,System.String,System.String)">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.EnableCorsAttribute" /> sınıfının yeni bir örneğini başlatır.</summary>
+      <param name="origins">Kaynağa erişmesine izin verilen virgülle ayrılmış başlangıç noktaları listesi. Tümüne izin vermek için "*" kullanın.</param>
+      <param name="headers">Kaynak tarafından desteklenen üstbilgilerin virgülle ayrılmış listesi. Tümüne izin vermek için "*" kullanın. Hiçbirine izin vermemek için null veya boş dize kullanın.</param>
+      <param name="methods">Kaynak tarafından desteklenen yöntemlerin virgülle ayrılmış listesi. Tümüne izin vermek için "*" kullanın. Hiçbirine izin vermemek için null veya boş dize kullanın.   Not:   Http fiilleri büyük/küçük harfe duyarlıdır; "*" işaretini kullanmıyorsanız GET, PUT, POST, DELETE vb. değerler belirtirken büyük harf kullanmanız gerekir. Örneğin:   var cors = new EnableCorsAttribute("http://localhost:1234", "*", "GET,PUT,POST,DELETE");  </param>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.#ctor(System.String,System.String,System.String,System.String)">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.EnableCorsAttribute" /> sınıfının yeni bir örneğini başlatır.</summary>
+      <param name="origins">Kaynağa erişmesine izin verilen virgülle ayrılmış başlangıç noktaları listesi. Tümüne izin vermek için "*" kullanın.</param>
+      <param name="headers">Kaynak tarafından desteklenen üstbilgilerin virgülle ayrılmış listesi. Tümüne izin vermek için "*" kullanın. Hiçbirine izin vermemek için null veya boş dize kullanın.</param>
+      <param name="methods">Kaynak tarafından desteklenen yöntemlerin virgülle ayrılmış listesi. Tümüne izin vermek için "*" kullanın. Hiçbirine izin vermemek için null veya boş dize kullanın.</param>
+      <param name="exposedHeaders">Kaynağın kullanabileceği ve kullanıma sunulabilecek üstbilgilerin virgülle ayrılmış listesi. Hiçbirini kullanıma sunmamak için null veya boş dize kullanın.</param>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.ExposedHeaders">
+      <summary>Kaynağın kullanabileceği ve kullanıma sunulabilecek üstbilgileri alır.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.EnableCorsAttribute.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)"></member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Headers">
+      <summary>Kaynak tarafından desteklenen üstbilgileri alır.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Methods">
+      <summary>Kaynak tarafından desteklenen yöntemleri alır.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.Origins">
+      <summary>Kaynağa erişmesine izin verilen başlangıç noktalarını alır.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.PreflightMaxAge">
+      <summary>Bir denetim öncesi isteğin önbelleğe alınabileceği saniye sayısını alır veya ayarlar.</summary>
+    </member>
+    <member name="P:System.Web.Http.Cors.EnableCorsAttribute.SupportsCredentials">
+      <summary>Kaynağın istekteki kullanıcı kimlik bilgilerini destekleyip desteklemediğini belirten bir değer alır veya ayarlar.</summary>
+    </member>
+    <member name="T:System.Web.Http.Cors.ICorsPolicyProvider">
+      <summary>
+        <see cref="T:System.Web.Cors.CorsPolicy" /> öğesini almak için bir özet sağlar.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.ICorsPolicyProvider.GetCorsPolicyAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+      <summary>
+        <see cref="T:System.Web.Cors.CorsPolicy" /> öğesini alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Cors.CorsPolicy" />.</returns>
+      <param name="request">İstek.</param>
+      <param name="cancellationToken">İptal belirteci.</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.ICorsPolicyProviderFactory">
+      <summary>
+        <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> öğesini almak için bir özet sağlar.</summary>
+    </member>
+    <member name="M:System.Web.Http.Cors.ICorsPolicyProviderFactory.GetCorsPolicyProvider(System.Net.Http.HttpRequestMessage)">
+      <summary>İstek için <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" /> öğesini alır.</summary>
+      <returns>
+        <see cref="T:System.Web.Http.Cors.ICorsPolicyProvider" />.</returns>
+      <param name="request">İstek.</param>
+    </member>
+    <member name="T:System.Web.Http.Cors.Tracing.TraceCategories">
+      <summary>Varsayılan CORS izleme uygulaması tarafından izlenen kategori adları.</summary>
+    </member>
+    <member name="F:System.Web.Http.Cors.Tracing.TraceCategories.CorsCategory">
+      <summary>CORS ile ilgili olaylar için izleme kategorisi.</summary>
+    </member>
+  </members>
+</doc>

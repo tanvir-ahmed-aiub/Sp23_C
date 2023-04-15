@@ -74,3 +74,7 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\obj\Debu
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\obj\Debug\APIAppLayer.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\EntityFramework.SqlServer.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\System.Web.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\System.Web.Http.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\System.Web.Http.Cors.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\C\Final Term\APIAppLayer\APIAppLayer\bin\tr\System.Web.Http.Cors.resources.dll

@@ -14,5 +14,6 @@ namespace DAL.Interfaces
         RET Insert(TYPE obj);
         RET Update(TYPE obj);
         bool Delete(ID id);
+        
     }
 }
